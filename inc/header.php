@@ -279,7 +279,7 @@
                                                             if($img_pd_cart) {
                                                                 while($result_img = $img_pd_cart->fetch_assoc()) {
                                                         ?>
-                                                        <a href="shop-single.php?idProduct=<?php echo $result['idProduct']?>"><img src="../kngu/AuraDash/assets/images/product/<?php echo $result_img['ImageName']?>" alt=""></a>
+                                                        <a href="shop-single.php?idProduct=<?php echo $result['idProduct']?>"><img src="../Aura-Store/AuraDash/assets/images/product/<?php echo $result_img['ImageName']?>" alt=""></a>
                                                         <?php
                                                                 }
                                                             }
@@ -333,7 +333,7 @@
                                         ?>
                                         <ul class="dropdown-menu" style="height:250px; width: 250px;">
                                             <li style="height:100%; display:flex; flex-direction:column; align-items:center; justify-content:center;">
-                                                <img src="../kngu/assets/images/no_cart.png" alt="" style="width: 80%;" class="product-image">
+                                                <img src="../Aura-Store/assets/images/no_cart.png" alt="" style="width: 80%;" class="product-image">
                                                 <span style="text-align: center; width: 100%; display:block;">Giỏ hàng trống</span>
                                             </li>
                                         </ul>

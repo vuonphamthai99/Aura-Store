@@ -96,7 +96,7 @@
                                                 while($result_image = $imglist->fetch_assoc()) {
                                         ?>
                                         <a href="shop-single.php?idProduct=<?php echo $result_image['idProduct']?>">
-                                            <img src="../kngu/AuraDash/assets/images/product/<?php echo $result_image['ImageName']?>" alt="">
+                                            <img src="../Aura-Store/AuraDash/assets/images/product/<?php echo $result_image['ImageName']?>" alt="">
                                         </a>
                                         <?php
                                                 }
@@ -380,7 +380,7 @@
                                                 while($result_image = $imglist->fetch_assoc()) {
                                         ?>
                                         <a href="shop-single.php?idProduct=<?php echo $result_image['idProduct']?>">
-                                            <img src="../kngu/AuraDash/assets/images/product/<?php echo $result_image['ImageName']?>" alt="">
+                                            <img src="../Aura-Store/AuraDash/assets/images/product/<?php echo $result_image['ImageName']?>" alt="">
                                         </a>
                                         <?php
                                                 }

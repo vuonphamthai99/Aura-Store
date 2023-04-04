@@ -52,7 +52,7 @@
                                 while($result_image = $imglist->fetch_assoc()) {
                                     $img_pd = $result_image['ImageName'];
                         ?>
-                        <label for="chk-pd-<?php echo $id;?>"><img src="../kngu/AuraDash/assets/images/product/<?php echo $result_image['ImageName']?>" class="rounded w-100 img-fluid"/></label>
+                        <label for="chk-pd-<?php echo $id;?>"><img src="../Aura-Store/AuraDash/assets/images/product/<?php echo $result_image['ImageName']?>" class="rounded w-100 img-fluid"/></label>
                         <?php
                                 }
                             }

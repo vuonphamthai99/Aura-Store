@@ -116,7 +116,7 @@
                             <i class="fa fa-envelope"></i>
                             <h4 class="title"> Email  </h4>
                             <p><a href="mailto:info@example.com"> order@aura.com </a></p>
-                            <p><a href="mailto:info@kngu.com"> order@aura.com </a></p>
+                            <p><a href="mailto:info@Aura-Store.com"> order@aura.com </a></p>
                         </div>
                     </div>
                 </div>

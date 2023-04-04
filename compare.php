@@ -83,7 +83,7 @@
                             if($imglist) {
                                 while($result_image = $imglist->fetch_assoc()) {
                             ?>
-                                <a class="product-image" href="shop-single.php?idProduct=<?php echo $result_image['idProduct']?>"><img src="../kngu/AuraDash/assets/images/product/<?php echo $result_image['ImageName']?>" alt="product"></a>
+                                <a class="product-image" href="shop-single.php?idProduct=<?php echo $result_image['idProduct']?>"><img src="../Aura-Store/AuraDash/assets/images/product/<?php echo $result_image['ImageName']?>" alt="product"></a>
                             <?php
                                 }
                             }

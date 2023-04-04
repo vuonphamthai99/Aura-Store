@@ -106,7 +106,7 @@
             $div = explode('.', $file_name);
             $file_ext = strtolower(end($div));
             $unique_image = substr(md5(time()), 0, 10).'.'.$file_ext;
-            $uploaded_image = "../kngu/assets/images/customer/".$unique_image;
+            $uploaded_image = "../Aura-Store/assets/images/customer/".$unique_image;
 
             if($CustomerName=="" || $PhoneNumber=="") {
                 $alert = "<span class='text-danger mt-10'>Các trường không được trống!!</span>";

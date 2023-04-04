@@ -76,7 +76,7 @@ use LDAP\Result;
                             while($result_image = $imglist->fetch_assoc()) {
                     ?>
                         <td class="image">
-                            <a href="shop-single.php?idProduct=<?php echo $result_image['idProduct']?>"><img src="../kngu/AuraDash/assets/images/product/<?php echo $result_image['ImageName']?>" alt=""></a>
+                            <a href="shop-single.php?idProduct=<?php echo $result_image['idProduct']?>"><img src="../Aura-Store/AuraDash/assets/images/product/<?php echo $result_image['ImageName']?>" alt=""></a>
                         </td>
                     <?php
                             }

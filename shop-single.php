@@ -64,7 +64,7 @@
                             if($img_pd) {
                                 while($result_image = $img_pd->fetch_assoc()) {
                         ?>
-                        <img class="product-zoom" src="../kngu/AuraDash/assets/images/product/<?php echo $result_image['ImageName']?>" alt="">
+                        <img class="product-zoom" src="../Aura-Store/AuraDash/assets/images/product/<?php echo $result_image['ImageName']?>" alt="">
                         <?php
                                 }
                             }
@@ -91,8 +91,8 @@
                                     while($result_image_slide = $imglist_slide->fetch_assoc()) {
                             ?>
                             <div class="swiper-slide single-product-thumb">
-                                <a class="active" href="#" data-image="../kngu/AuraDash/assets/images/product/<?php echo $result_image_slide['ImageName']?>">
-                                    <img src="../kngu/AuraDash/assets/images/product/<?php echo $result_image_slide['ImageName']?>" alt="">
+                                <a class="active" href="#" data-image="../Aura-Store/AuraDash/assets/images/product/<?php echo $result_image_slide['ImageName']?>">
+                                    <img src="../Aura-Store/AuraDash/assets/images/product/<?php echo $result_image_slide['ImageName']?>" alt="">
                                 </a>
                             </div>
                             <?php
@@ -389,7 +389,7 @@
                                         while($result_image = $imglist->fetch_assoc()) {
                                 ?>
                                 <a href="shop-single.php?idProduct=<?php echo $result_image['idProduct']?>">
-                                    <img src="../kngu/AuraDash/assets/images/product/<?php echo $result_image['ImageName']?>" alt="">
+                                    <img src="../Aura-Store/AuraDash/assets/images/product/<?php echo $result_image['ImageName']?>" alt="">
                                 </a>
                                 <?php
                                         }
