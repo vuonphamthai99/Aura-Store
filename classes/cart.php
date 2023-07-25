@@ -139,7 +139,7 @@
         //Lấy sản phẩm trong giỏ hàng
         public function get_product_cart(){
             $idCustomer = Session::get('customer_id');
-            $query = "SELECT Cart.*, Product.ProductName FROM Cart INNER JOIN Product ON Cart.idProduct = Product.idProduct WHERE idCustomer = '$idCustomer'";
+            $query = "SELECT Cart.*, Product.ProductName,Product.Quantity FROM Cart INNER JOIN Product ON Cart.idProduct = Product.idProduct WHERE idCustomer = '$idCustomer'";
             $result = $this->db->select($query);
             return $result;
         }
