@@ -82,19 +82,24 @@
 
             $query = "SELECT * FROM Product WHERE idProduct = '$idProduct'";
             $result = $this->db->select($query)->fetch_assoc();
-            
+
             $now = date('Y-m-d H:i:s');
             $query_discount = "SELECT Discount FROM SaleProduct WHERE idProduct = '$idProduct' AND SaleStart < '$now' AND SaleEnd > '$now'"; 
             $result_discount = $this->db->select($query_discount);
 
-            if($result_discount) $get_discount = $result_discount->fetch_assoc();
+            $get_discount = ($result_discount) ? $result_discount->fetch_assoc() : null;
 
             $Price = $result['Price'];
-            if($get_discount['Discount']) $SalePrice = $Price - ($Price/100)*$get_discount['Discount'];
-            else $SalePrice = $Price;
+            if ($get_discount && $get_discount['Discount'] > 0) {
+                $SalePrice = $Price - ($Price / 100) * $get_discount['Discount'];
+            } else {
+                $SalePrice = $Price;
+            }
 
-            $round_SalePrice = round($SalePrice,-3);
+            $round_SalePrice = round($SalePrice, -3);
+
             $Total = $QuantityBuy * $round_SalePrice;
+
 
             $get_pd_cart = "SELECT * FROM Cart WHERE idCustomer = '$idCustomer' AND idProduct ='$idProduct'";
             $select_pd_cart = $this->db->select($get_pd_cart);
@@ -139,7 +144,7 @@
         //Lấy sản phẩm trong giỏ hàng
         public function get_product_cart(){
             $idCustomer = Session::get('customer_id');
-            $query = "SELECT Cart.*, Product.ProductName,Product.Quantity FROM Cart INNER JOIN Product ON Cart.idProduct = Product.idProduct WHERE idCustomer = '$idCustomer'";
+            $query = "SELECT Cart.*, Product.ProductName, Product.Quantity FROM Cart INNER JOIN Product ON Cart.idProduct = Product.idProduct WHERE idCustomer = '$idCustomer'";
             $result = $this->db->select($query);
             return $result;
         }
